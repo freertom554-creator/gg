@@ -586,6 +586,19 @@
           '</div>';
       }).join('');
 
+      const uspStatement = d.usp || 'Trusted by clients who expect the very best — quality, care and results, every time.';
+      const trustItems = [
+        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>', label: '10+ Years Experience' },
+        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', label: '100% Satisfaction Guarantee' },
+        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>', label: 'Local & Reliable' },
+      ];
+      const trustHTML = trustItems.map(function(t) {
+        return '<div class="trust-item">' +
+          '<div class="trust-icon">' + t.icon + '</div>' +
+          '<span>' + t.label + '</span>' +
+          '</div>';
+      }).join('');
+
       return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -658,6 +671,15 @@ nav.scrolled .nav-links a:hover{color:#1a1a2e;}
 .srv-card p{font-size:14px;line-height:1.75;color:#666;}
 @media(max-width:900px){.srv-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:560px){.srv-grid{grid-template-columns:1fr;}}
+
+/* USP / WHY US */
+.usp{padding:90px 0;background:var(--p);text-align:center;}
+.usp-statement{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,46px);font-weight:700;color:#fff;max-width:820px;margin:0 auto 64px;line-height:1.25;letter-spacing:-.5px;}
+.trust-row{display:flex;align-items:flex-start;justify-content:center;gap:56px;flex-wrap:wrap;}
+.trust-item{display:flex;flex-direction:column;align-items:center;gap:14px;color:rgba(255,255,255,.9);font-size:15px;font-weight:500;max-width:180px;text-align:center;line-height:1.4;}
+.trust-icon{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.trust-icon svg{width:26px;height:26px;stroke:rgba(255,255,255,.95);}
+@media(max-width:600px){.trust-row{gap:36px;}.usp-statement{margin-bottom:48px;}}
 </style>
 </head>
 <body>
@@ -713,6 +735,15 @@ nav.scrolled .nav-links a:hover{color:#1a1a2e;}
     </div>
     <div class="srv-grid">
       ${servicesHTML}
+    </div>
+  </div>
+</section>
+
+<section class="usp">
+  <div class="container">
+    <p class="usp-statement">${uspStatement}</p>
+    <div class="trust-row">
+      ${trustHTML}
     </div>
   </div>
 </section>
