@@ -461,10 +461,50 @@
     primaryColor.addEventListener('input', () => { primaryHex.textContent = primaryColor.value; });
     secondaryColor.addEventListener('input', () => { secondaryHex.textContent = secondaryColor.value; });
 
-    // Placeholder submit handler
+    function generateWebsite(d) {
+      console.log('=== generateWebsite called ===');
+      console.log('name:', d.name);
+      console.log('industry:', d.industry);
+      console.log('location:', d.location);
+      console.log('slogan:', d.slogan);
+      console.log('services:', d.services);
+      console.log('primaryColor:', d.primaryColor);
+      console.log('secondaryColor:', d.secondaryColor);
+      console.log('phone:', d.phone);
+      console.log('email:', d.email);
+      console.log('address:', d.address);
+      console.log('hours:', d.hours);
+      console.log('audience:', d.audience);
+      console.log('usp:', d.usp);
+      // TODO: return complete HTML string
+    }
+
     document.getElementById('generatorForm').addEventListener('submit', (e) => {
       e.preventDefault();
-      alert('Generation logic coming in the next step!');
+      const d = {
+        name:           document.getElementById('companyName').value.trim(),
+        industry:       document.getElementById('industry').value,
+        location:       document.getElementById('location').value.trim(),
+        slogan:         document.getElementById('slogan').value.trim(),
+        services:       ['service1','service2','service3','service4','service5','service6']
+                          .map(id => document.getElementById(id).value.trim())
+                          .filter(Boolean),
+        primaryColor:   document.getElementById('primaryColor').value,
+        secondaryColor: document.getElementById('secondaryColor').value,
+        phone:          document.getElementById('phone').value.trim(),
+        email:          document.getElementById('email').value.trim(),
+        address:        document.getElementById('address').value.trim(),
+        hours:          document.getElementById('openingHours').value.trim(),
+        audience:       document.getElementById('targetAudience').value.trim(),
+        usp:            document.getElementById('usp').value.trim(),
+      };
+
+      if (!d.name || !d.industry || !d.location || !d.services.length || !d.phone || !d.email) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      generateWebsite(d);
     });
   </script>
 
