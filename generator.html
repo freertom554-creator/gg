@@ -505,6 +505,16 @@
       other:      'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1920&q=85&auto=format&fit=crop',
     };
 
+    // Feather-style SVG icons cycled across service cards
+    const SERVICE_ICONS = [
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="9" y1="18" x2="15" y2="18"/><line x1="10" y1="22" x2="14" y2="22"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg>',
+      '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    ];
+
     const INDUSTRY_ABOUT_IMGS = {
       restaurant:  'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=85&auto=format&fit=crop',
       law:         'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=900&q=85&auto=format&fit=crop',
@@ -568,6 +578,13 @@
       if (d.audience) aboutMetaRows.push('<div class="about-tag"><span class="tag-label">We serve</span><span>' + d.audience + '</span></div>');
       if (d.usp)      aboutMetaRows.push('<div class="about-tag"><span class="tag-label">Our edge</span><span>' + d.usp + '</span></div>');
       const aboutMetaHTML = aboutMetaRows.join('');
+      const servicesHTML = d.services.map(function(svc, i) {
+        return '<div class="srv-card">' +
+          '<div class="srv-icon">' + SERVICE_ICONS[i % SERVICE_ICONS.length] + '</div>' +
+          '<h3>' + svc + '</h3>' +
+          '<p>Professional ' + svc.toLowerCase() + ' tailored to your specific needs, delivered with expertise and care.</p>' +
+          '</div>';
+      }).join('');
 
       return `<!DOCTYPE html>
 <html lang="en">
@@ -626,6 +643,21 @@ nav.scrolled .nav-links a:hover{color:#1a1a2e;}
 .about-img-wrap img{width:100%;height:520px;object-fit:cover;border-radius:18px;display:block;position:relative;z-index:1;}
 .about-img-wrap::after{content:'';position:absolute;bottom:-16px;right:-16px;width:55%;height:55%;border-bottom:3px solid var(--p);border-right:3px solid var(--p);border-radius:0 0 18px 0;z-index:0;}
 @media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:40px;}.about-img-wrap img{height:300px;}.about-img-wrap::after{display:none;}}
+
+/* SERVICES */
+.services{padding:100px 0;background:#f8f8fc;}
+.sec-head{text-align:center;max-width:560px;margin:0 auto 56px;}
+.sec-eyebrow{display:inline-block;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--p);margin-bottom:14px;}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,42px);font-weight:700;color:#1a1a2e;letter-spacing:-1px;margin-top:4px;}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.srv-card{background:#fff;border-radius:16px;padding:36px 30px;border:1px solid rgba(0,0,0,.06);transition:transform .25s,box-shadow .25s;}
+.srv-card:hover{transform:translateY(-6px);box-shadow:0 20px 56px rgba(0,0,0,.09);}
+.srv-icon{width:52px;height:52px;border-radius:14px;background:rgba(var(--prgb),.1);color:var(--p);display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
+.srv-icon svg{width:24px;height:24px;}
+.srv-card h3{font-family:'Playfair Display',serif;font-size:19px;font-weight:600;color:#1a1a2e;margin-bottom:10px;}
+.srv-card p{font-size:14px;line-height:1.75;color:#666;}
+@media(max-width:900px){.srv-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.srv-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -669,6 +701,18 @@ nav.scrolled .nav-links a:hover{color:#1a1a2e;}
       <div class="about-img-wrap">
         <img src="${aboutImg}" alt="About ${d.name}">
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-eyebrow">What We Offer</span>
+      <h2>Our Services</h2>
+    </div>
+    <div class="srv-grid">
+      ${servicesHTML}
     </div>
   </div>
 </section>
