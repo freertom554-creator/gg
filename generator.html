@@ -436,12 +436,12 @@
     secondaryColor.addEventListener('input', () => { secondaryHex.textContent = secondaryColor.value; });
 
     const INDUSTRY_LABELS = {
-      restaurant:'Restaurant & Café', law:'Law Firm', gym:'Fitness & Gym',
-      spa:'Spa & Wellness', agency:'Creative Agency', tech:'Technology',
-      medical:'Healthcare', realestate:'Real Estate', architecture:'Architecture',
-      photography:'Photography', consulting:'Consulting', hotel:'Hotel & Hospitality',
-      construction:'Construction', education:'Education', beauty:'Beauty & Salon',
-      retail:'Retail & Fashion', other:'Professional Services'
+      restaurant:'Restaurant & Café', law:'Kanzlei & Recht', gym:'Fitness & Sport',
+      spa:'Spa & Wellness', agency:'Kreativagentur', tech:'Technologie & Software',
+      medical:'Medizin & Gesundheit', realestate:'Immobilien', architecture:'Architektur & Innendesign',
+      photography:'Fotografie', consulting:'Beratung & Finanzen', hotel:'Hotel & Gastronomie',
+      construction:'Bau & Handwerk', education:'Bildung & Coaching', beauty:'Beauty & Friseursalon',
+      retail:'Einzelhandel & Mode', other:'Dienstleistungen'
     };
 
     const INDUSTRY_HERO_IMGS = {
@@ -495,43 +495,43 @@
     };
 
     const INDUSTRY_ABOUT_CORE = {
-      restaurant:  'is passionate about crafting unforgettable dining experiences. Every dish is prepared from locally sourced, seasonal ingredients by our expert chefs — because great food is always worth the care.',
-      law:         'is a dedicated legal practice committed to protecting your rights and interests. With deep expertise across multiple practice areas, we deliver strategic, results-driven counsel our clients can count on.',
-      gym:         'believes fitness is for everyone. Our state-of-the-art facility, expert personal trainers and welcoming community exist for one purpose: helping you reach your goals, whatever they are.',
-      spa:         'offers a sanctuary of calm in the heart of the city. Our holistic treatments and curated rituals are designed to restore your body, quiet your mind, and renew your spirit.',
-      agency:      'is a creative agency that builds brands people love. From strategy and identity to digital experiences, we bring design, technology and storytelling together to create work that drives real results.',
-      tech:        'builds software that solves real problems. Our team of engineers and designers partners with ambitious companies to deliver scalable, user-centred digital products that create meaningful growth.',
-      medical:     'is committed to delivering compassionate, evidence-based care that puts the patient first. Our experienced medical team combines cutting-edge diagnostics with a deeply personal approach to your health.',
-      realestate:  'is a premier real estate agency helping clients find, buy and sell exceptional properties. With deep market knowledge and an uncompromising commitment to service, we turn your vision into reality.',
-      architecture:'designs spaces that inspire. Our studio combines spatial innovation with human-centred thinking, creating environments that are as functional as they are beautiful — built to last.',
-      photography: 'captures moments that matter. Our studio specialises in authentic visual storytelling — from commercial campaigns to intimate portraits — with a signature blend of artistry and craft.',
-      consulting:  'is a strategic advisory firm helping organisations solve complex challenges and seize growth opportunities. Our senior advisors bring real industry experience to every engagement.',
-      hotel:       'offers a retreat of exceptional comfort, style and service. Every stay is curated to ensure you feel truly at home — whether you are here for business, leisure or a special occasion.',
-      construction:'builds with precision, pride and integrity. From residential renovations to large commercial projects, we deliver on time, within budget and to the highest quality standards — every time.',
-      education:   'is dedicated to unlocking potential through exceptional education and coaching. Our experienced instructors and evidence-based curriculum create transformative learning journeys for every student.',
-      beauty:      'believes beauty is a form of self-expression, and we are here to help you find yours. Our skilled stylists create looks that enhance your natural confidence and leave you feeling your very best.',
-      retail:      'curates collections that celebrate individuality, quality and timeless style. Every piece is hand-selected with intention, passion and an eye for what endures — because style should never be a compromise.',
-      other:       'is a team of dedicated professionals committed to delivering exceptional results. With deep expertise, a client-first mindset and a genuine passion for what we do, we bring real value to every engagement.',
+      restaurant:  'steht für unvergessliche Genusserlebnisse. Jedes Gericht wird von unseren erfahrenen Köchen aus regional bezogenen, saisonalen Zutaten zubereitet — weil gutes Essen immer die nötige Sorgfalt verdient.',
+      law:         'ist eine engagierte Kanzlei, die Ihre Rechte und Interessen konsequent schützt. Mit fundierter Expertise in zahlreichen Rechtsgebieten bieten wir strategische, ergebnisorientierte Beratung auf die Sie sich verlassen können.',
+      gym:         'ist überzeugt: Fitness gehört zu jedem. Unsere moderne Anlage, qualifizierte Trainer und eine motivierende Gemeinschaft verfolgen ein Ziel: Ihnen zu helfen, Ihre Ziele zu erreichen — ganz gleich welche.',
+      spa:         'bietet einen Ort der Ruhe mitten in der Stadt. Unsere ganzheitlichen Behandlungen und sorgfältig zusammengestellten Rituale stärken Körper, beruhigen den Geist und lassen Sie neu aufleben.',
+      agency:      'ist eine Kreativagentur, die Marken erschafft, die Menschen begeistern. Von Strategie und Identität bis zu digitalen Erlebnissen verbinden wir Design, Technologie und Storytelling zu Ergebnissen, die wirklich wirken.',
+      tech:        'entwickelt Software, die echte Probleme löst. Unser Team aus Entwicklern und Designern arbeitet mit ambitionierten Unternehmen zusammen, um skalierbare, nutzerzentrierte digitale Produkte mit nachhaltigem Wachstum zu liefern.',
+      medical:     'steht für einfühlsame, evidenzbasierte Medizin, die den Patienten in den Mittelpunkt stellt. Unser erfahrenes Team verbindet modernste Diagnostik mit einem persönlichen Ansatz für Ihre Gesundheit.',
+      realestate:  'ist eine führende Immobilienagentur, die Kunden beim Finden, Kaufen und Verkaufen außergewöhnlicher Immobilien begleitet. Mit tiefem Marktverständnis und kompromisslosem Serviceanspruch machen wir Ihre Vorstellungen real.',
+      architecture:'entwirft Räume, die inspirieren. Unser Studio verbindet räumliche Innovation mit menschenzentriertem Denken und schafft Umgebungen, die ebenso funktional wie schön sind — gebaut für die Ewigkeit.',
+      photography: 'hält Momente fest, die zählen. Unser Studio ist auf authentisches visuelles Storytelling spezialisiert — von Werbekampagnen bis zu intimen Porträts — mit einem unverwechselbaren Zusammenspiel aus Kunst und Handwerk.',
+      consulting:  'ist ein strategisches Beratungsunternehmen, das Organisationen hilft, komplexe Herausforderungen zu meistern und Wachstumschancen zu nutzen. Unsere Senior-Berater bringen echte Branchenerfahrung in jedes Mandat ein.',
+      hotel:       'bietet einen Rückzugsort mit außergewöhnlichem Komfort, Stil und Service. Jeder Aufenthalt wird sorgfältig gestaltet, damit Sie sich wirklich wie zu Hause fühlen — ob geschäftlich, privat oder zu einem besonderen Anlass.',
+      construction:'baut mit Präzision, Stolz und Integrität. Von Wohnrenovierungen bis zu großen Gewerbeprojekten liefern wir pünktlich, im Budget und nach höchsten Qualitätsstandards — jedes Mal.',
+      education:   'widmet sich der Entfaltung von Potenzialen durch erstklassige Bildung und Coaching. Unsere erfahrenen Lehrkräfte und ein evidenzbasiertes Curriculum schaffen transformative Lernerfahrungen für jeden Teilnehmer.',
+      beauty:      'ist überzeugt: Schönheit ist ein Ausdruck der eigenen Persönlichkeit — und wir helfen Ihnen, Ihren zu finden. Unsere talentierten Stylisten kreieren Looks, die Ihr natürliches Selbstbewusstsein stärken.',
+      retail:      'kuratiert Kollektionen, die Individualität, Qualität und zeitlosen Stil feiern. Jedes Stück wird mit Bedacht, Leidenschaft und einem Gespür für das Bleibende ausgewählt — weil Stil niemals ein Kompromiss sein sollte.',
+      other:       'ist ein Team engagierter Profis, das außergewöhnliche Ergebnisse liefert. Mit tiefem Fachwissen, einem kundenorientierten Mindset und echter Leidenschaft für unsere Arbeit schaffen wir echten Mehrwert in jedem Projekt.',
     };
 
     const INDUSTRY_TESTIMONIALS = {
-      restaurant:   [{ q: 'The food is exceptional every single visit. The attention to detail in every dish is something truly special.', name: 'Sophie L.', role: 'Food Blogger' }, { q: 'Warm service, beautiful atmosphere and flavours I keep thinking about days later. My favourite spot in the city.', name: 'Marcus T.', role: 'Regular Guest' }, { q: 'We held our anniversary dinner here and it was flawless. The team went above and beyond to make it unforgettable.', name: 'Clara & James W.', role: 'Guests' }],
-      law:          [{ q: 'They navigated a complex business dispute with precision and calm. The outcome exceeded everything we hoped for.', name: 'Richard H.', role: 'CEO, Hartwell Group' }, { q: 'Responsive, thorough and genuinely invested in my case. I always felt informed and in safe hands.', name: 'Anna S.', role: 'Private Client' }, { q: 'Their counsel helped us structure a deal that protected our interests completely. Outstanding expertise.', name: 'David L.', role: 'Managing Director' }],
-      gym:          [{ q: 'Six months in and I have completely transformed — physically and mentally. The coaches here are world-class.', name: 'Jake T.', role: 'Member since 2022' }, { q: 'The best gym environment I have ever trained in. Clean, well-equipped and a community that actually motivates you.', name: 'Lisa M.', role: 'Competitive Athlete' }, { q: 'I drive 30 minutes each way just to come here. The programming, the coaching, the energy — nothing else compares.', name: 'Marcus R.', role: 'Member' }],
-      spa:          [{ q: 'I leave every session feeling completely renewed. The therapists read exactly what your body needs — it is remarkable.', name: 'Emma L.', role: 'Monthly Member' }, { q: 'The most luxurious spa experience I have had anywhere in the world. The ritual treatments are extraordinary.', name: 'Clara D.', role: 'Hotel Guest' }, { q: 'My go-to sanctuary. After two years of regular visits I can honestly say it has changed how I manage stress entirely.', name: 'Sophie R.', role: 'Wellness Enthusiast' }],
-      agency:       [{ q: 'They did not just redesign our brand — they reimagined how we show up in the world. The results speak for themselves.', name: 'Rachel K.', role: 'Founder, Novo Studio' }, { q: 'Creative, strategic and brilliantly organised. We hit every milestone and the final product is something we are truly proud of.', name: 'James P.', role: 'Marketing Director' }, { q: 'Working with this team was one of the best decisions we made this year. Fast, talented and genuinely collaborative.', name: 'Nina F.', role: 'CEO, Fieldwork Co.' }],
-      tech:         [{ q: 'They built our platform in record time without cutting a single corner. Scalable, clean and exactly what we envisioned.', name: 'Alex T.', role: 'CTO, Vanta Labs' }, { q: 'The most technically capable team we have worked with. They understood our product better than agencies twice their size.', name: 'Maria G.', role: 'Product Lead' }, { q: 'Our new system cut operational overhead by 40% in the first quarter. The ROI was clear from day one.', name: 'Ben S.', role: 'COO, Shelf Logistics' }],
-      medical:      [{ q: 'For the first time in years I feel truly listened to by a medical practice. The care here is exceptional and personal.', name: 'Helen M.', role: 'Patient' }, { q: 'They took the time to understand my full history and built a plan that has genuinely changed my quality of life.', name: 'Robert A.', role: 'Patient' }, { q: 'Professional, compassionate and thorough. I trust this team completely with my family\'s health.', name: 'Diana P.', role: 'Patient' }],
-      realestate:   [{ q: 'They found us our dream home in under a month. Attentive, knowledgeable and endlessly patient with our questions.', name: 'Chris & Laura B.', role: 'Home Buyers' }, { q: 'My property sold above asking price in six days. The marketing was outstanding and the negotiation even better.', name: 'Peter N.', role: 'Home Seller' }, { q: 'The smoothest property transaction I have ever experienced. Expert guidance from listing to completion.', name: 'Susan H.', role: 'Property Investor' }],
-      architecture: [{ q: 'They transformed our office into a space that genuinely reflects our culture. Functional, beautiful and on budget.', name: 'Oliver T.', role: 'CEO, Drift Studio' }, { q: 'The attention to detail is extraordinary. Every material, every proportion was considered with real care.', name: 'Caroline M.', role: 'Homeowner' }, { q: 'True design partners. They challenged our brief in the best possible way and delivered something we are incredibly proud of.', name: 'Greg A.', role: 'Property Developer' }],
-      photography:  [{ q: 'The photos from our wedding are breathtaking. Every emotion is captured with such honesty and beauty.', name: 'Sarah & Tom W.', role: 'Wedding Clients' }, { q: 'Our campaign imagery stopped people scrolling immediately. The creative direction was bold, fresh and perfectly on-brand.', name: 'Mark L.', role: 'Brand Manager' }, { q: 'The portraits they created for our leadership team are the best professional photos any of us have ever had taken.', name: 'Amanda K.', role: 'HR Director' }],
-      consulting:   [{ q: 'Their strategic input helped us enter two new markets profitably within 18 months. A genuinely invaluable partnership.', name: 'Thomas R.', role: 'CEO, Meridian Capital' }, { q: 'Rigorous analysis combined with clear, actionable recommendations. They changed how our board thinks about growth.', name: 'Jennifer A.', role: 'CFO' }, { q: 'A trusted sounding board for our senior team. Sharp, data-driven thinking every single time.', name: 'Michael H.', role: 'Chairman' }],
-      hotel:        [{ q: 'The most beautiful hotel stay I have ever had. The service is impeccable and the room was an absolute sanctuary.', name: 'Elise M.', role: 'Travel Writer' }, { q: 'They remembered my preferences from my very first stay. That level of personalised service is rare and deeply appreciated.', name: 'James O.', role: 'Business Traveller' }, { q: 'We held our company retreat here and every detail was flawless. The events team was exceptional.', name: 'Kate S.', role: 'Events Director' }],
-      construction: [{ q: 'Our new office building was delivered two weeks ahead of schedule to an exceptional standard of finish.', name: 'Daniel P.', role: 'Property Developer' }, { q: 'They kept us informed throughout and every single detail of the renovation was handled with real care.', name: 'Anna W.', role: 'Homeowner' }, { q: 'Professional, reliable and highly skilled. Our commercial fit-out was handled flawlessly from start to handover.', name: 'Mark E.', role: 'Retail Operations Manager' }],
-      education:    [{ q: 'The coaching here completely changed my career trajectory. Practical, motivating and genuinely life-changing.', name: 'Rachel M.', role: 'Graduate, 2023' }, { q: 'My son\'s progress in three months has been remarkable. Patient, skilled instructors who truly invest in each student.', name: 'David K.', role: 'Parent' }, { q: 'The best educational investment I have made. The curriculum is challenging, relevant and delivered by true experts.', name: 'Nina L.', role: 'Professional Development Student' }],
-      beauty:       [{ q: 'I have been coming here for three years and the quality never drops. Best haircut of my life, every single time.', name: 'Emma T.', role: 'Regular Client' }, { q: 'The atmosphere is so relaxing and the results always exceed my expectations. My go-to for every special occasion.', name: 'Chloe R.', role: 'Client' }, { q: 'They truly listen to what you want and always deliver. Talented, warm professionals every single visit.', name: 'Laura B.', role: 'Client' }],
-      retail:       [{ q: 'The curation is impeccable. Every piece feels considered and the team genuinely understands personal style.', name: 'Isabella M.', role: 'Regular Shopper' }, { q: 'I always find something unique here that I cannot find anywhere else. An absolute gem of a boutique.', name: 'Camille D.', role: 'Fashion Enthusiast' }, { q: 'The quality is outstanding and the personal styling advice made all the difference. I leave every visit feeling great.', name: 'Natalie R.', role: 'Client' }],
-      other:        [{ q: 'Outstanding results and a team that genuinely cared about our success from day one. Highly recommended.', name: 'John A.', role: 'Director' }, { q: 'They understood our needs immediately and delivered exactly what we were looking for — on time and on budget.', name: 'Maria B.', role: 'Business Owner' }, { q: 'Responsive, skilled and completely invested in the outcome. We could not be happier with what they delivered.', name: 'Steven C.', role: 'Operations Manager' }],
+      restaurant:   [{ q: 'Das Essen ist bei jedem Besuch außergewöhnlich. Die Liebe zum Detail in jedem Gericht ist wirklich besonders.', name: 'Sophie L.', role: 'Food-Bloggerin' }, { q: 'Herzlicher Service, wunderschöne Atmosphäre und Aromen, die mich noch Tage später beschäftigen. Mein Lieblingsrestaurant in der Stadt.', name: 'Marcus T.', role: 'Stammgast' }, { q: 'Wir haben unser Jubiläumsdinner hier gefeiert und es war perfekt. Das Team hat alles gegeben, um es unvergesslich zu machen.', name: 'Clara & James W.', role: 'Gäste' }],
+      law:          [{ q: 'Die Kanzlei hat einen komplexen Geschäftsstreit mit Präzision und Ruhe navigiert. Das Ergebnis hat all unsere Erwartungen übertroffen.', name: 'Richard H.', role: 'CEO, Hartwell Group' }, { q: 'Schnell, gründlich und wirklich an meinem Fall interessiert. Ich fühlte mich stets gut informiert und in sicheren Händen.', name: 'Anna S.', role: 'Privatmandant' }, { q: 'Die Beratung hat uns geholfen, einen Deal zu strukturieren, der unsere Interessen vollständig schützt. Hervorragende Expertise.', name: 'David L.', role: 'Geschäftsführer' }],
+      gym:          [{ q: 'Nach sechs Monaten habe ich mich komplett verändert — körperlich und mental. Die Trainer hier sind Weltklasse.', name: 'Jake T.', role: 'Mitglied seit 2022' }, { q: 'Das beste Trainingsumfeld, in dem ich je trainiert habe. Sauber, gut ausgestattet und eine Community, die wirklich motiviert.', name: 'Lisa M.', role: 'Leistungssportlerin' }, { q: 'Ich fahre 30 Minuten einfache Strecke — und es lohnt sich jedes Mal. Das Programm, das Coaching, die Energie — nichts vergleichbar.', name: 'Marcus R.', role: 'Mitglied' }],
+      spa:          [{ q: 'Nach jeder Behandlung fühle ich mich vollkommen erneuert. Die Therapeuten spüren genau, was der Körper braucht — bemerkenswert.', name: 'Emma L.', role: 'Monatsabonnentin' }, { q: 'Das luxuriöseste Spa-Erlebnis, das ich je irgendwo auf der Welt hatte. Die Ritual-Behandlungen sind außergewöhnlich.', name: 'Clara D.', role: 'Hotelgast' }, { q: 'Mein persönliches Refugium. Nach zwei Jahren regelmäßiger Besuche kann ich sagen: es hat meinen Umgang mit Stress grundlegend verändert.', name: 'Sophie R.', role: 'Wellness-Enthusiastin' }],
+      agency:       [{ q: 'Sie haben nicht nur unsere Marke neu gestaltet — sie haben neu definiert, wie wir in der Welt auftreten. Die Ergebnisse sprechen für sich.', name: 'Rachel K.', role: 'Gründerin, Novo Studio' }, { q: 'Kreativ, strategisch und brilliant organisiert. Wir haben jeden Meilenstein erreicht und das Endprodukt macht uns wirklich stolz.', name: 'James P.', role: 'Marketing Director' }, { q: 'Mit diesem Team zu arbeiten war eine der besten Entscheidungen des Jahres. Schnell, talentiert und wirklich kollaborativ.', name: 'Nina F.', role: 'CEO, Fieldwork Co.' }],
+      tech:         [{ q: 'Sie haben unsere Plattform in Rekordzeit entwickelt — ohne einen einzigen Kompromiss. Skalierbar, sauber und genau das, was wir uns vorgestellt hatten.', name: 'Alex T.', role: 'CTO, Vanta Labs' }, { q: 'Das technisch kompetenteste Team, mit dem wir je zusammengearbeitet haben. Sie verstanden unser Produkt besser als Agenturen doppelter Größe.', name: 'Maria G.', role: 'Product Lead' }, { q: 'Unser neues System hat den Betriebsaufwand im ersten Quartal um 40 % gesenkt. Der ROI war vom ersten Tag an klar.', name: 'Ben S.', role: 'COO, Shelf Logistics' }],
+      medical:      [{ q: 'Zum ersten Mal seit Jahren fühle ich mich von einer Arztpraxis wirklich gehört. Die Fürsorge hier ist außergewöhnlich und persönlich.', name: 'Helen M.', role: 'Patientin' }, { q: 'Das Team hat sich Zeit genommen, meine gesamte Krankengeschichte zu verstehen, und einen Plan entwickelt, der meine Lebensqualität wirklich verbessert hat.', name: 'Robert A.', role: 'Patient' }, { q: 'Professionell, einfühlsam und gründlich. Ich vertraue diesem Team meine Familiengesundheit vollständig an.', name: 'Diana P.', role: 'Patientin' }],
+      realestate:   [{ q: 'Sie haben uns unser Traumhaus in weniger als einem Monat gefunden. Aufmerksam, kompetent und unendlich geduldig mit unseren Fragen.', name: 'Chris & Laura B.', role: 'Käufer' }, { q: 'Meine Immobilie wurde in sechs Tagen über dem Angebotspreis verkauft. Das Marketing war herausragend und die Verhandlungsführung noch besser.', name: 'Peter N.', role: 'Verkäufer' }, { q: 'Die reibungsloseste Immobilientransaktion, die ich je erlebt habe. Fachkundige Begleitung vom Inserat bis zur Übergabe.', name: 'Susan H.', role: 'Immobilieninvestorin' }],
+      architecture: [{ q: 'Sie haben unser Büro in einen Raum verwandelt, der unsere Unternehmenskultur wirklich widerspiegelt. Funktional, schön und im Budget.', name: 'Oliver T.', role: 'CEO, Drift Studio' }, { q: 'Die Liebe zum Detail ist außergewöhnlich. Jedes Material, jede Proportion wurde mit echter Sorgfalt bedacht.', name: 'Caroline M.', role: 'Hausbesitzerin' }, { q: 'Echte Designpartner. Sie haben unser Briefing auf die bestmögliche Weise hinterfragt und etwas geliefert, worauf wir unglaublich stolz sind.', name: 'Greg A.', role: 'Bauträger' }],
+      photography:  [{ q: 'Die Fotos von unserer Hochzeit sind atemberaubend. Jede Emotion ist mit so viel Ehrlichkeit und Schönheit eingefangen.', name: 'Sarah & Tom W.', role: 'Hochzeitskunden' }, { q: 'Unsere Kampagnenbilder haben Menschen sofort zum Innehalten gebracht. Die kreative Richtung war mutig, frisch und perfekt zur Marke passend.', name: 'Mark L.', role: 'Brand Manager' }, { q: 'Die Porträts für unser Führungsteam sind die besten professionellen Fotos, die jeder von uns je hatte.', name: 'Amanda K.', role: 'HR-Direktorin' }],
+      consulting:   [{ q: 'Ihre strategische Beratung hat uns geholfen, zwei neue Märkte innerhalb von 18 Monaten profitabel zu erschließen. Eine unschätzbar wertvolle Partnerschaft.', name: 'Thomas R.', role: 'CEO, Meridian Capital' }, { q: 'Rigorose Analyse kombiniert mit klaren, umsetzbaren Empfehlungen. Sie haben das Wachstumsdenken unseres Vorstands grundlegend verändert.', name: 'Jennifer A.', role: 'CFO' }, { q: 'Ein verlässlicher Sparringspartner für unser Führungsteam. Scharfes, datengetriebenes Denken — jedes Mal.', name: 'Michael H.', role: 'Vorsitzender' }],
+      hotel:        [{ q: 'Der schönste Hotelaufenthalt, den ich je hatte. Der Service ist tadellos und das Zimmer war ein absolutes Refugium.', name: 'Elise M.', role: 'Reisejournalistin' }, { q: 'Sie erinnerten sich beim zweiten Besuch an meine Vorlieben vom ersten. Diese Art von persönlichem Service ist selten und wird sehr geschätzt.', name: 'James O.', role: 'Geschäftsreisender' }, { q: 'Wir haben hier unser Firmen-Retreat veranstaltet und jedes Detail war perfekt. Das Veranstaltungsteam war außergewöhnlich.', name: 'Kate S.', role: 'Eventdirektorin' }],
+      construction: [{ q: 'Unser neues Bürogebäude wurde zwei Wochen vor Zeitplan und mit einem außergewöhnlichen Fertigungsstandard übergeben.', name: 'Daniel P.', role: 'Bauträger' }, { q: 'Das Team hat uns durchgehend informiert und jedes Detail der Renovierung mit echter Sorgfalt behandelt.', name: 'Anna W.', role: 'Hausbesitzerin' }, { q: 'Professionell, zuverlässig und hochqualifiziert. Unser gewerblicher Innenausbau wurde vom Start bis zur Übergabe makellos abgewickelt.', name: 'Mark E.', role: 'Filialleiter' }],
+      education:    [{ q: 'Das Coaching hier hat meinen Karriereweg vollständig verändert. Praxisnah, motivierend und wirklich lebensverändernd.', name: 'Rachel M.', role: 'Absolventin 2023' }, { q: 'Der Fortschritt meines Sohnes in drei Monaten ist bemerkenswert. Geduldige, kompetente Lehrkräfte, die wirklich in jeden Schüler investieren.', name: 'David K.', role: 'Elternteil' }, { q: 'Die beste Bildungsinvestition, die ich je gemacht habe. Der Lehrplan ist anspruchsvoll, relevant und wird von echten Experten vermittelt.', name: 'Nina L.', role: 'Weiterbildungsstudentin' }],
+      beauty:       [{ q: 'Ich komme seit drei Jahren hierher und die Qualität lässt nie nach. Bester Haarschnitt meines Lebens — jedes Mal.', name: 'Emma T.', role: 'Stammkundin' }, { q: 'Die Atmosphäre ist so entspannend und die Ergebnisse übertreffen stets meine Erwartungen. Meine erste Wahl für jeden besonderen Anlass.', name: 'Chloe R.', role: 'Kundin' }, { q: 'Man hört wirklich zu, was man möchte, und liefert immer. Talentierte, herzliche Profis bei jedem Besuch.', name: 'Laura B.', role: 'Kundin' }],
+      retail:       [{ q: 'Die Auswahl ist tadellos. Jedes Stück wirkt durchdacht und das Team versteht persönlichen Stil wirklich.', name: 'Isabella M.', role: 'Stammkundin' }, { q: 'Ich finde hier immer etwas Einzigartiges, das ich nirgendwo sonst finde. Ein absolutes Juwel von einem Boutique-Laden.', name: 'Camille D.', role: 'Modebegeisterte' }, { q: 'Die Qualität ist herausragend und die persönliche Styling-Beratung hat den entscheidenden Unterschied gemacht. Ich verlasse jeden Besuch mit einem guten Gefühl.', name: 'Natalie R.', role: 'Kundin' }],
+      other:        [{ q: 'Hervorragende Ergebnisse und ein Team, dem unser Erfolg vom ersten Tag an wirklich am Herzen lag. Klare Empfehlung.', name: 'John A.', role: 'Direktor' }, { q: 'Sie haben unsere Bedürfnisse sofort verstanden und genau das geliefert, wonach wir gesucht haben — pünktlich und im Budget.', name: 'Maria B.', role: 'Unternehmerin' }, { q: 'Reaktionsschnell, kompetent und vollständig auf das Ergebnis fokussiert. Wir könnten nicht zufriedener mit dem sein, was geliefert wurde.', name: 'Steven C.', role: 'Betriebsleiter' }],
     };
 
     const INDUSTRY_DEFAULT_SERVICES = {
@@ -611,35 +611,35 @@
       const pcRgb = hexToRgb(pc);
       const scRgb = hexToRgb(sc);
       const heroImg = INDUSTRY_HERO_IMGS[d.industry] || INDUSTRY_HERO_IMGS.other;
-      const industryLabel = INDUSTRY_LABELS[d.industry] || 'Professional Services';
-      const subline = d.slogan || 'Quality, passion and expertise — at your service.';
+      const industryLabel = INDUSTRY_LABELS[d.industry] || 'Dienstleistungen';
+      const subline = d.slogan || 'Qualität, Leidenschaft und Expertise — in Ihrem Dienst.';
       const aboutImg   = INDUSTRY_ABOUT_IMGS[d.industry] || INDUSTRY_ABOUT_IMGS.other;
       const parsedRevs = parseReviews(d.reviews);
       const parsedInfo = parseWebsiteInfo(d.websiteInfo);
       const aboutCore  = INDUSTRY_ABOUT_CORE[d.industry] || INDUSTRY_ABOUT_CORE.other;
-      const aboutText  = parsedInfo.aboutText || ('Based in ' + d.location + ', ' + d.name + ' ' + aboutCore);
+      const aboutText  = parsedInfo.aboutText || ('Ansässig in ' + d.location + ', ' + d.name + ' ' + aboutCore);
       const resolvedUsp = d.usp || parsedInfo.usp || '';
       const resolvedServices = (parsedInfo.services && parsedInfo.services.length >= 1)
         ? parsedInfo.services
         : (INDUSTRY_DEFAULT_SERVICES[d.industry] || INDUSTRY_DEFAULT_SERVICES.other);
       const aboutMetaRows = [];
-      if (d.location)   aboutMetaRows.push('<div class="about-tag"><span class="tag-label">Location</span><span>' + d.location + '</span></div>');
-      if (d.audience)   aboutMetaRows.push('<div class="about-tag"><span class="tag-label">We serve</span><span>' + d.audience + '</span></div>');
-      if (resolvedUsp)  aboutMetaRows.push('<div class="about-tag"><span class="tag-label">Our edge</span><span>' + resolvedUsp + '</span></div>');
+      if (d.location)   aboutMetaRows.push('<div class="about-tag"><span class="tag-label">Standort</span><span>' + d.location + '</span></div>');
+      if (d.audience)   aboutMetaRows.push('<div class="about-tag"><span class="tag-label">Zielgruppe</span><span>' + d.audience + '</span></div>');
+      if (resolvedUsp)  aboutMetaRows.push('<div class="about-tag"><span class="tag-label">Unser Vorteil</span><span>' + resolvedUsp + '</span></div>');
       const aboutMetaHTML = aboutMetaRows.join('');
       const servicesHTML = resolvedServices.map(function(svc, i) {
         return '<div class="srv-card">' +
           '<div class="srv-icon">' + SERVICE_ICONS[i % SERVICE_ICONS.length] + '</div>' +
           '<h3>' + svc + '</h3>' +
-          '<p>Professional ' + svc.toLowerCase() + ' tailored to your specific needs, delivered with expertise and care.</p>' +
+          '<p>Professionelle Leistung rund um ' + svc.toLowerCase() + ' — individuell auf Ihre Bedürfnisse zugeschnitten.</p>' +
           '</div>';
       }).join('');
 
-      const uspStatement = resolvedUsp || 'Trusted by clients who expect the very best — quality, care and results, every time.';
+      const uspStatement = resolvedUsp || 'Vertrauen Sie auf Qualität, Sorgfalt und Ergebnisse — bei jedem Auftrag, jederzeit.';
       const trustItems = [
-        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>', label: '10+ Years Experience' },
-        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', label: '100% Satisfaction Guarantee' },
-        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>', label: 'Local & Reliable' },
+        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>', label: '10+ Jahre Erfahrung' },
+        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', label: '100 % Kundenzufriedenheit' },
+        { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>', label: 'Regional & Zuverlässig' },
       ];
       const tData = parsedRevs || INDUSTRY_TESTIMONIALS[d.industry] || INDUSTRY_TESTIMONIALS.other;
       const testimonialsHTML = tData.map(function(t) {
@@ -665,11 +665,11 @@
       const PIN_ICO   = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>';
       const CLOCK_ICO = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>';
       const contactRows = [
-        { icon: PHONE_ICO, label: 'Phone', val: d.phone, href: 'tel:' + d.phone.replace(/\s/g,'') },
-        { icon: EMAIL_ICO, label: 'Email', val: d.email, href: 'mailto:' + d.email },
+        { icon: PHONE_ICO, label: 'Telefon', val: d.phone, href: 'tel:' + d.phone.replace(/\s/g,'') },
+        { icon: EMAIL_ICO, label: 'E-Mail',  val: d.email, href: 'mailto:' + d.email },
       ];
-      if (d.address) contactRows.push({ icon: PIN_ICO,   label: 'Address',       val: d.address, href: null });
-      if (d.hours)   contactRows.push({ icon: CLOCK_ICO, label: 'Opening Hours', val: d.hours,   href: null });
+      if (d.address) contactRows.push({ icon: PIN_ICO,   label: 'Adresse',       val: d.address, href: null });
+      if (d.hours)   contactRows.push({ icon: CLOCK_ICO, label: 'Öffnungszeiten', val: d.hours,   href: null });
       const contactHTML = contactRows.map(function(c) {
         var val = c.href ? '<a href="' + c.href + '">' + c.val + '</a>' : '<span>' + c.val + '</span>';
         return '<div class="contact-row">' +
@@ -677,11 +677,11 @@
           '<div class="contact-info"><span class="contact-label">' + c.label + '</span>' + val + '</div>' +
           '</div>';
       }).join('');
-      const footerTagline = d.slogan || 'Quality, passion and expertise — at your service.';
+      const footerTagline = d.slogan || 'Qualität, Leidenschaft und Expertise — in Ihrem Dienst.';
       const year = new Date().getFullYear();
 
       return `<!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -805,12 +805,12 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
   <div class="nav-in">
     <a href="#" class="nav-logo">${d.name}</a>
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">Über uns</a>
+      <a href="#services">Leistungen</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#contact">Kontakt</a>
     </div>
-    <a href="#contact" class="nav-cta">Get in Touch</a>
+    <a href="#contact" class="nav-cta">Jetzt anfragen</a>
   </div>
 </nav>
 
@@ -821,8 +821,8 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
     <h1>${d.name}</h1>
     <p class="hero-sub">${subline}</p>
     <div class="hero-actions">
-      <a href="#services" class="btn-primary">Explore Services</a>
-      <a href="#contact" class="btn-ghost">Get in Touch</a>
+      <a href="#services" class="btn-primary">Leistungen entdecken</a>
+      <a href="#contact" class="btn-ghost">Jetzt anfragen</a>
     </div>
   </div>
 </section>
@@ -831,14 +831,14 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
   <div class="container">
     <div class="about-grid">
       <div class="about-text">
-        <span class="about-eyebrow">About Us</span>
-        <h2>Who We Are</h2>
+        <span class="about-eyebrow">Über uns</span>
+        <h2>Wer wir sind</h2>
         <p class="about-body">${aboutText}</p>
         <div class="about-meta">${aboutMetaHTML}</div>
-        <a href="#contact" class="btn-primary">Work With Us</a>
+        <a href="#contact" class="btn-primary">Jetzt anfragen</a>
       </div>
       <div class="about-img-wrap">
-        <img src="${aboutImg}" alt="About ${d.name}">
+        <img src="${aboutImg}" alt="Über ${d.name}">
       </div>
     </div>
   </div>
@@ -847,8 +847,8 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
 <section id="services" class="services">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-eyebrow">What We Offer</span>
-      <h2>Our Services</h2>
+      <span class="sec-eyebrow">Unser Angebot</span>
+      <h2>Unsere Leistungen</h2>
     </div>
     <div class="srv-grid">
       ${servicesHTML}
@@ -868,8 +868,8 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
 <section class="testimonials">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-eyebrow">What People Say</span>
-      <h2>Client Stories</h2>
+      <span class="sec-eyebrow">Was Kunden sagen</span>
+      <h2>Kundenstimmen</h2>
     </div>
     <div class="testi-grid">
       ${testimonialsHTML}
@@ -880,8 +880,8 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
 <section id="contact" class="contact">
   <div class="container">
     <div class="sec-head">
-      <span class="sec-eyebrow">Get In Touch</span>
-      <h2>We'd Love to Hear From You</h2>
+      <span class="sec-eyebrow">Kontakt aufnehmen</span>
+      <h2>Wir freuen uns von Ihnen zu hören</h2>
     </div>
     <div class="contact-rows">
       ${contactHTML}
@@ -895,7 +895,7 @@ section:not(.hero).visible,footer.visible{opacity:1;transform:translateY(0);}
       <div class="footer-logo">${d.name}</div>
       <p class="footer-tag">${footerTagline}</p>
       <div class="footer-divider"></div>
-      <p class="footer-copy">&copy; ${year} ${d.name}. All rights reserved.</p>
+      <p class="footer-copy">&copy; ${year} ${d.name}. Alle Rechte vorbehalten.</p>
     </div>
   </div>
 </footer>
