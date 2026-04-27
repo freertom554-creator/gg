@@ -555,6 +555,26 @@
       other:       'is a team of dedicated professionals committed to delivering exceptional results. With deep expertise, a client-first mindset and a genuine passion for what we do, we bring real value to every engagement.',
     };
 
+    const INDUSTRY_TESTIMONIALS = {
+      restaurant:   [{ q: 'The food is exceptional every single visit. The attention to detail in every dish is something truly special.', name: 'Sophie L.', role: 'Food Blogger' }, { q: 'Warm service, beautiful atmosphere and flavours I keep thinking about days later. My favourite spot in the city.', name: 'Marcus T.', role: 'Regular Guest' }, { q: 'We held our anniversary dinner here and it was flawless. The team went above and beyond to make it unforgettable.', name: 'Clara & James W.', role: 'Guests' }],
+      law:          [{ q: 'They navigated a complex business dispute with precision and calm. The outcome exceeded everything we hoped for.', name: 'Richard H.', role: 'CEO, Hartwell Group' }, { q: 'Responsive, thorough and genuinely invested in my case. I always felt informed and in safe hands.', name: 'Anna S.', role: 'Private Client' }, { q: 'Their counsel helped us structure a deal that protected our interests completely. Outstanding expertise.', name: 'David L.', role: 'Managing Director' }],
+      gym:          [{ q: 'Six months in and I have completely transformed — physically and mentally. The coaches here are world-class.', name: 'Jake T.', role: 'Member since 2022' }, { q: 'The best gym environment I have ever trained in. Clean, well-equipped and a community that actually motivates you.', name: 'Lisa M.', role: 'Competitive Athlete' }, { q: 'I drive 30 minutes each way just to come here. The programming, the coaching, the energy — nothing else compares.', name: 'Marcus R.', role: 'Member' }],
+      spa:          [{ q: 'I leave every session feeling completely renewed. The therapists read exactly what your body needs — it is remarkable.', name: 'Emma L.', role: 'Monthly Member' }, { q: 'The most luxurious spa experience I have had anywhere in the world. The ritual treatments are extraordinary.', name: 'Clara D.', role: 'Hotel Guest' }, { q: 'My go-to sanctuary. After two years of regular visits I can honestly say it has changed how I manage stress entirely.', name: 'Sophie R.', role: 'Wellness Enthusiast' }],
+      agency:       [{ q: 'They did not just redesign our brand — they reimagined how we show up in the world. The results speak for themselves.', name: 'Rachel K.', role: 'Founder, Novo Studio' }, { q: 'Creative, strategic and brilliantly organised. We hit every milestone and the final product is something we are truly proud of.', name: 'James P.', role: 'Marketing Director' }, { q: 'Working with this team was one of the best decisions we made this year. Fast, talented and genuinely collaborative.', name: 'Nina F.', role: 'CEO, Fieldwork Co.' }],
+      tech:         [{ q: 'They built our platform in record time without cutting a single corner. Scalable, clean and exactly what we envisioned.', name: 'Alex T.', role: 'CTO, Vanta Labs' }, { q: 'The most technically capable team we have worked with. They understood our product better than agencies twice their size.', name: 'Maria G.', role: 'Product Lead' }, { q: 'Our new system cut operational overhead by 40% in the first quarter. The ROI was clear from day one.', name: 'Ben S.', role: 'COO, Shelf Logistics' }],
+      medical:      [{ q: 'For the first time in years I feel truly listened to by a medical practice. The care here is exceptional and personal.', name: 'Helen M.', role: 'Patient' }, { q: 'They took the time to understand my full history and built a plan that has genuinely changed my quality of life.', name: 'Robert A.', role: 'Patient' }, { q: 'Professional, compassionate and thorough. I trust this team completely with my family\'s health.', name: 'Diana P.', role: 'Patient' }],
+      realestate:   [{ q: 'They found us our dream home in under a month. Attentive, knowledgeable and endlessly patient with our questions.', name: 'Chris & Laura B.', role: 'Home Buyers' }, { q: 'My property sold above asking price in six days. The marketing was outstanding and the negotiation even better.', name: 'Peter N.', role: 'Home Seller' }, { q: 'The smoothest property transaction I have ever experienced. Expert guidance from listing to completion.', name: 'Susan H.', role: 'Property Investor' }],
+      architecture: [{ q: 'They transformed our office into a space that genuinely reflects our culture. Functional, beautiful and on budget.', name: 'Oliver T.', role: 'CEO, Drift Studio' }, { q: 'The attention to detail is extraordinary. Every material, every proportion was considered with real care.', name: 'Caroline M.', role: 'Homeowner' }, { q: 'True design partners. They challenged our brief in the best possible way and delivered something we are incredibly proud of.', name: 'Greg A.', role: 'Property Developer' }],
+      photography:  [{ q: 'The photos from our wedding are breathtaking. Every emotion is captured with such honesty and beauty.', name: 'Sarah & Tom W.', role: 'Wedding Clients' }, { q: 'Our campaign imagery stopped people scrolling immediately. The creative direction was bold, fresh and perfectly on-brand.', name: 'Mark L.', role: 'Brand Manager' }, { q: 'The portraits they created for our leadership team are the best professional photos any of us have ever had taken.', name: 'Amanda K.', role: 'HR Director' }],
+      consulting:   [{ q: 'Their strategic input helped us enter two new markets profitably within 18 months. A genuinely invaluable partnership.', name: 'Thomas R.', role: 'CEO, Meridian Capital' }, { q: 'Rigorous analysis combined with clear, actionable recommendations. They changed how our board thinks about growth.', name: 'Jennifer A.', role: 'CFO' }, { q: 'A trusted sounding board for our senior team. Sharp, data-driven thinking every single time.', name: 'Michael H.', role: 'Chairman' }],
+      hotel:        [{ q: 'The most beautiful hotel stay I have ever had. The service is impeccable and the room was an absolute sanctuary.', name: 'Elise M.', role: 'Travel Writer' }, { q: 'They remembered my preferences from my very first stay. That level of personalised service is rare and deeply appreciated.', name: 'James O.', role: 'Business Traveller' }, { q: 'We held our company retreat here and every detail was flawless. The events team was exceptional.', name: 'Kate S.', role: 'Events Director' }],
+      construction: [{ q: 'Our new office building was delivered two weeks ahead of schedule to an exceptional standard of finish.', name: 'Daniel P.', role: 'Property Developer' }, { q: 'They kept us informed throughout and every single detail of the renovation was handled with real care.', name: 'Anna W.', role: 'Homeowner' }, { q: 'Professional, reliable and highly skilled. Our commercial fit-out was handled flawlessly from start to handover.', name: 'Mark E.', role: 'Retail Operations Manager' }],
+      education:    [{ q: 'The coaching here completely changed my career trajectory. Practical, motivating and genuinely life-changing.', name: 'Rachel M.', role: 'Graduate, 2023' }, { q: 'My son\'s progress in three months has been remarkable. Patient, skilled instructors who truly invest in each student.', name: 'David K.', role: 'Parent' }, { q: 'The best educational investment I have made. The curriculum is challenging, relevant and delivered by true experts.', name: 'Nina L.', role: 'Professional Development Student' }],
+      beauty:       [{ q: 'I have been coming here for three years and the quality never drops. Best haircut of my life, every single time.', name: 'Emma T.', role: 'Regular Client' }, { q: 'The atmosphere is so relaxing and the results always exceed my expectations. My go-to for every special occasion.', name: 'Chloe R.', role: 'Client' }, { q: 'They truly listen to what you want and always deliver. Talented, warm professionals every single visit.', name: 'Laura B.', role: 'Client' }],
+      retail:       [{ q: 'The curation is impeccable. Every piece feels considered and the team genuinely understands personal style.', name: 'Isabella M.', role: 'Regular Shopper' }, { q: 'I always find something unique here that I cannot find anywhere else. An absolute gem of a boutique.', name: 'Camille D.', role: 'Fashion Enthusiast' }, { q: 'The quality is outstanding and the personal styling advice made all the difference. I leave every visit feeling great.', name: 'Natalie R.', role: 'Client' }],
+      other:        [{ q: 'Outstanding results and a team that genuinely cared about our success from day one. Highly recommended.', name: 'John A.', role: 'Director' }, { q: 'They understood our needs immediately and delivered exactly what we were looking for — on time and on budget.', name: 'Maria B.', role: 'Business Owner' }, { q: 'Responsive, skilled and completely invested in the outcome. We could not be happier with what they delivered.', name: 'Steven C.', role: 'Operations Manager' }],
+    };
+
     function hexToRgb(hex) {
       const r = parseInt(hex.slice(1,3),16);
       const g = parseInt(hex.slice(3,5),16);
@@ -592,7 +612,19 @@
         { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>', label: '100% Satisfaction Guarantee' },
         { icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>', label: 'Local & Reliable' },
       ];
-      const trustHTML = trustItems.map(function(t) {
+      const tData = INDUSTRY_TESTIMONIALS[d.industry] || INDUSTRY_TESTIMONIALS.other;
+      const testimonialsHTML = tData.map(function(t) {
+        return '<div class="testi-card">' +
+          '<span class="testi-quote">“</span>' +
+          '<p class="testi-body">' + t.q + '</p>' +
+          '<div class="testi-author">' +
+            '<div class="testi-avatar">' + t.name.charAt(0) + '</div>' +
+            '<div><strong>' + t.name + '</strong><span>' + t.role + '</span></div>' +
+          '</div>' +
+          '</div>';
+      }).join('');
+
+      const trustItems = [
         return '<div class="trust-item">' +
           '<div class="trust-icon">' + t.icon + '</div>' +
           '<span>' + t.label + '</span>' +
@@ -680,6 +712,18 @@ nav.scrolled .nav-links a:hover{color:#1a1a2e;}
 .trust-icon{width:56px;height:56px;border-radius:16px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .trust-icon svg{width:26px;height:26px;stroke:rgba(255,255,255,.95);}
 @media(max-width:600px){.trust-row{gap:36px;}.usp-statement{margin-bottom:48px;}}
+
+/* TESTIMONIALS */
+.testimonials{padding:100px 0;background:#f8f8fc;}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.testi-card{background:#fff;border-radius:16px;padding:40px 32px 32px;border:1px solid rgba(0,0,0,.06);display:flex;flex-direction:column;position:relative;overflow:hidden;}
+.testi-quote{position:absolute;top:16px;right:24px;font-family:'Playfair Display',serif;font-size:96px;line-height:1;color:rgba(var(--prgb),.08);font-weight:700;pointer-events:none;user-select:none;}
+.testi-body{font-size:15px;line-height:1.8;color:#444;font-style:italic;flex:1;margin-bottom:28px;position:relative;z-index:1;}
+.testi-author{display:flex;align-items:center;gap:12px;}
+.testi-avatar{width:42px;height:42px;border-radius:50%;background:var(--p);color:#fff;font-size:16px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.testi-author strong{display:block;font-size:14px;font-weight:600;color:#1a1a2e;}
+.testi-author span{display:block;font-size:12px;color:#999;margin-top:2px;}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;}}
 </style>
 </head>
 <body>
@@ -744,6 +788,18 @@ nav.scrolled .nav-links a:hover{color:#1a1a2e;}
     <p class="usp-statement">${uspStatement}</p>
     <div class="trust-row">
       ${trustHTML}
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-eyebrow">What People Say</span>
+      <h2>Client Stories</h2>
+    </div>
+    <div class="testi-grid">
+      ${testimonialsHTML}
     </div>
   </div>
 </section>
